@@ -16,7 +16,8 @@ if eleccion not in categorias:
     eleccion = "programacion"
 
 words = categorias[eleccion]
-word = random.choice(words)
+palabras_disponibles = random.sample(words, len(words))
+word = palabras_disponibles.pop()
 guessed = []
 attempts = 6
 incorrectas = 0
